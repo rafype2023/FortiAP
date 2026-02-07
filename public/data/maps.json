@@ -1,0 +1,68 @@
+[
+  {
+    "id": "mr1130-floor-1",
+    "name": "Floor 1",
+    "site": "MR1130",
+    "image": "/maps/mr1130-floor-1.jpeg"
+  },
+  {
+    "id": "mr1130-floor-2",
+    "name": "Floor 2",
+    "site": "MR1130",
+    "image": "/maps/mr1130-floor-2.jpeg"
+  },
+  {
+    "id": "mr1130-floor-3",
+    "name": "Floor 3",
+    "site": "MR1130",
+    "image": "/maps/mr1130-floor-3.jpeg"
+  },
+  {
+    "id": "mr1130-floor-4",
+    "name": "Floor 4",
+    "site": "MR1130",
+    "image": "/maps/mr1130-floor-4.jpeg"
+  },
+  {
+    "id": "mr1130-ph",
+    "name": "Penthouse",
+    "site": "MR1130",
+    "image": "/maps/placeholder.png"
+  },
+  {
+    "id": "mr876-floor-2",
+    "name": "Floor 2",
+    "site": "MR876",
+    "image": "/maps/MR876-floor2.jpeg"
+  },
+  {
+    "id": "mr876-floor-3",
+    "name": "Floor 3",
+    "site": "MR876",
+    "image": "/maps/MR876-floor3.jpeg"
+  },
+  {
+    "id": "santurce-floor-1",
+    "name": "Floor 1",
+    "site": "Santurce",
+    "image": "/maps/santurce-floor-1.jpeg"
+  },
+  {
+    "id": "santurce-floor-2",
+    "name": "Floor 2",
+    "site": "Santurce",
+    "image": "/maps/santurce-floor-2.jpeg"
+  },
+  {
+    "id": "santurce-floor-9",
+    "name": "Floor 9",
+    "site": "Santurce",
+    "image": "/maps/santurce-floor-9.jpeg"
+  },
+  {
+    "id": "santurce-ph",
+    "name": "Penthouse",
+    "site": "Santurce",
+    "image": "/maps/placeholder.png"
+  }
+]
