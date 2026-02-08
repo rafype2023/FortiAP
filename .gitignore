@@ -4,6 +4,7 @@ dist
 dist-ssr
 *.local
 .env
+public/data/placements.json
 .idea
 .vscode
 __pycache__

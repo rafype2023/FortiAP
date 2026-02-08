@@ -17,20 +17,19 @@ export const DataProvider = ({ children }) => {
 
     // Placements: { [apId]: { x: 0.5, y: 0.5, floorId: '...' } }
     // Relative coordinates (0-1) are better for responsive maps
-    const [placements, setPlacements] = useState(() => {
-        const saved = localStorage.getItem('ap_placements');
-        return saved ? JSON.parse(saved) : {};
-    });
+    const [placements, setPlacements] = useState({});
 
     // Load Data
     useEffect(() => {
         Promise.all([
             fetch('/data/aps.json').then(res => res.json()),
-            fetch('/data/maps.json').then(res => res.json())
+            fetch('/data/maps.json').then(res => res.json()),
+            fetch('/api/placements').then(res => res.json())
         ])
-            .then(([apsData, mapsData]) => {
+            .then(([apsData, mapsData, placementsData]) => {
                 setAps(apsData);
                 setMaps(mapsData);
+                setPlacements(placementsData || {});
 
                 // Set initial selection if available
                 if (mapsData.length > 0) {
@@ -53,8 +52,14 @@ export const DataProvider = ({ children }) => {
 
     // Save placements when they change
     useEffect(() => {
-        localStorage.setItem('ap_placements', JSON.stringify(placements));
-    }, [placements]);
+        if (!loading) {
+            fetch('/api/placements', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(placements)
+            }).catch(err => console.error("Failed to save placements:", err));
+        }
+    }, [placements, loading]);
 
     const placeAP = (apId, x, y, floorId) => {
         setPlacements(prev => ({
