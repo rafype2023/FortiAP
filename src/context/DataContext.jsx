@@ -121,7 +121,9 @@ export const DataProvider = ({ children }) => {
             placeAP,
             removeAP,
             getUnplacedAPs,
-            getPlacedAPsForFloor
+            getUnplacedAPs,
+            getPlacedAPsForFloor,
+            resetFloorPlacements
         }}>
             {children}
         </DataContext.Provider>
